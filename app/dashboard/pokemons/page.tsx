@@ -1,5 +1,11 @@
 import { getPokemons } from "@/app/services/getPokemon";
 import { PokemonsGrid } from "./components/pokemons.grid";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "151 Pokemons",
+  description: "Listado de 151 Pokemons",
+};
 
 export default async function PokemonsPage() {
   const pokemons = await getPokemons(150);
